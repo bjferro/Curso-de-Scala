@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="windows-1252"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Programación con el lenguaje Scala</title>
+    <meta name="keywords" content="" />
+    <meta http-equiv="content-type" content="text/html; charset=windows-1252" />
+    <link rel="stylesheet" href="estilo/estilocursoarqui.css" type="text/css" />
+  </head>
+
+  <body>
+
+    <div id="menu">
+      <h1 style=" font-size: x-large; color: #B6C28B">
+         <b><center>Curso de programación con el lenguaje Scala</center></b>
+      </h1>
+
+      <center>
+      <ul id="jsddm">
+        <li><a href="index.html">Inicio</a></li>
+
+        <li><a href="#">Temas</a>
+          <ul>
+            <li><a href="#introduccion">Introducción e instalación de Scala</a></li>
+            <li><a href="#sintaxis">Sintaxis de Scala, guiones y programas</a></li>
+            <li><a href="#clases">Clases y objetos</a></li>
+            <li><a href="#tipos">Los tipos fundamentales y sus métodos</a></li>
+            <li><a href="#control">Estructuras de control</a></li>
+            <li><a href="#herencia">Composición y Herencia</a></li>
+            <li><a href="#funcional">Programación funcional con Scala</a></li>
+            <li><a href="#colecciones">Colecciones y ventajas de la inmutabilidad</a></li>
+            <li><a href="#matching">Pattern Matching (¿en español?)</a></li>
+            <li><a href="#actores">Actores y programación concurrente</a></li>
+            <li><a href="#parsers">Programación de parsers</a></li>
+
+          </ul>
+        </li>
+
+        <li><a href="bibliografia/bibliografia.html">Bibliografía</a></li>
+
+        <li><a href="calendario/calendario.html">Calendario</a></li>
+
+        <li><a href="#profesor">Profesor</a></li>
+
+        <li><a href="informes/informes.html">Informes</a></li>
+      </ul>
+      </center>
+      <br />
+      <br />
+    </div>
+
+    <div id="all">
+      <script type="text/javascript" src="js/jquery-1.3.2.js">
+      </script>
+      <script type="text/javascript" src="js/jsdm.js">
+      </script>
+
+      <h1>
+        Scala es uno de los tantos lenguajes de programación que en los últimos años han surgido
+        para la máquina virtual de Java. Es un lenguaje que combina de manera muy elegante el estilo
+        imperativo de la programación orientada a objetos, con el estilo de la programación funcional.
+        Scala permite hacer uso de todo el potencial del lenguaje Java e ir mucho más allá para resolver
+        problemas donde la transparencia referencial que se obtiene con la programación funcional es un
+        ingrediente imprescindible para escribir código "limpio".
+        Este curso introduce al participante conocedor de Java en el mundo de Scala, siguiendo un camino
+        ni largo ni tortuoso y asimilando la "complejidad" del lenguaje "sorbo a sorbo".
+      </h1>
+      <hr/>
+
+      <h1 style="color: orange">
+         <a href="#"
+            name="introduccion" id="introduccion">
+            Introducción e instalación de Scala
+         </a>
+     </h1>
+      <p>
+        Nada como comenzar a estudiar un lenguaje con ejemplos simples,que muestren algunas
+        de sus bondades, y que nos permita experimentar de manera rápida con guiones "incompletos"
+        que están lejos de constituir un programa completo. Scala con su REPL (Read, Eval, Print,
+        Loop) nos permite cortar código desde el primer instante y suavemente introducirnos en sus
+        bondades, entre ellas la de tratar a las funciones como valores y evitar el uso de variables
+        mutables, causantes de muchos de los errores en el estilo de programación imperativa.<br>
+        Por supuesto que los impacientes querrán escribir programas compilados y seguramente escribirlos
+        haciendo uso de un buen IDE que nos facilite la tarea. Es entonces necesario mostrar esas porciones
+        (scripts) de código en programas que se "dejen" compilar. Será necesario venir armado con Scala,
+        Eclipse y Scala IDE for Eclipse para ir al grano desde el primer minuto del curso.
+      </p>
+      <hr/>
+
+
+      <h1 style="color: orange">
+         <a href="#"
+            name="sintaxis" id="sintaxis">
+            Sintaxis de Scala, guiones y programas
+         </a>
+      </h1>
+      <p>
+        Para programar en un lenguaje es requisito obligado conocer su sintaxis; no conozco otra forma de comunicar
+         a la computadora lo que quiero que resuelva. Afortunadamente, los que inventan lenguajes de programación conocen
+         que una de las reglas de oro para lograr la aceptación de su creación, es "parecerse" a lo que ya está aceptado.
+         Scala, al respecto, se enfrenta a un reto: lograr que el programador experto en la orientación a objetos, se acostumbre
+         al uso de una sintaxis de la programación funcional, pero que afortunadamente la puede ir aprendiendo de manera
+         paulatina.<br>
+         ¿Es compleja la sintaxis de Scala? Ni sí ni no, sino todo lo contrario.
+      </p>
+      <hr/>
+
+      <h1 style="color: orange">
+         <a href="#"
+            name="clases" id="clases">Clases y Objetos</a>
+      </h1>
+      <p>
+        Scala (todos lo dicen) es un lenguaje híbrido de programación funcional y de programación orientada a objetos. Veremos en
+        el curso que es un lenguaje de programación orientado a objetos puro con clases y traits para instanciar objetos
+        funciones. Scala es un lenguaje orientado a objetos basado en clases con construcciones novedosas para implementar
+        unidades de comportamiento (traits) que pueden "mezclarse" en clases, logrando jerarquías de herencia muy flexibles.
+        En Scala todos los valores son objetos y todo valor tiene un tipo asociado que es comprobado por el compilador; es un lenguaje
+        de tipado estático, carente de tipos primitivos, pero con las optimizaciones necesarias para aprovechar el tratamiento eficiente
+        que realiza la máquina virtual con los tipos primitivos.<br>
+
+
+
+      <hr/>
+
+      <h1 style="color: orange">
+         <a href="#"
+            name="tipos" id="tipos">Los tipos fundamentales y sus métodos</a>
+      </h1>
+      <p>
+        El sistema de tipos de Scala es sin dudas complejo, pero el programador puede afrontar esa complejidad esencial, disminuyendo
+        la complejidad accidental, regla ésta de todo buen diseñador.<br>
+        Scala brinda un arsenal para el procesamiento de listas y secuencias, típico de los lenguajes funcionales. Muchas de las
+        estructuras de datos que utilizamos se implementan con secuencias de objetos y el procesamiento eficiente de ellas determina en
+        ocasiones el desempeño de las aplicaciones.<br>
+
+      </p>
+      <hr/>
+
+
+      <h1 style="color: orange">
+         <a href="#"
+            name="control" id="funcionales">Estructuras de control</a>
+
+      </h1>
+      <p>
+        En Scala disponemos de las estructuras de control típicas: <code>if, while, for,
+        try, match, </code> y las llamadas a funciones. Otros lenguajes tienen otras
+        estructuras de control incorporadas. Scala, a diferencia de esos lenguajes, permite
+        que el programador cree nuevas estructuras de control haciendo uso de funciones
+        de orden superior e incorporando esas abstracciones de control en bibliotecas, en lugar
+        de hacerlo en su sintaxis básica.<br>
+        Casi todas las estructuras de control en Scala son expresiones que resultan en
+        algún valor en el momento que son aplicadas. Es el enfoque de los lenguajes
+        funcionales, en los que toda computación se resuelve mediante la aplicación de
+        funciones. No es entonces sorpresa que el operador ternario frecuente en muchos
+        lenguajes de programación esté ausente en Scala.
+
+      </p>
+      <hr/>
+
+      <h1 style="color: orange">
+          <a href="#"
+          name="herencia" id="herencia">
+          Composición y Herencia</a>
+      </h1>
+      <p>
+        <i>Favor composition over inheritance</i> es uno de los principios de diseño
+        relevantes de la programación orientada a objetos y la razón principal de varios patrones de
+        diseño, entre ellos el ubicuo Decorador.<br>
+        La composición y la herencia son los dos mecanismos básicos de reuso en la programación orientada a objetos,
+        siendo la segunda usada de manera incorrecta en muchas ocasiones donde la solución correcta es
+        una combinación de ambas técnicas.<br>
+        Scala ofrece un soporte excelente para el diseño correcto de los principios de abstracción fundamentales de
+        la programación orientada a objetos: Clasificación/Instanciación, Agregación/Descomposición,
+        Generalización/Especialización y Agrupamiento/Individualización.<br>
+        Si los términos anteriores suenan ajenos, entonces vale la frase de Moliere en <i>Le Bourgeois gentilhomme </i>: "Good
+        heavens! For more than forty years I have been speaking prose without knowing it".
+      </p>
+      <hr/>
+
+      <h1 style="color: orange">
+          <a href=""
+          name="funcional" id="funcional">
+          Programación funcional con Scala</a>
+      </h1>
+      <p>
+        La programación funcional siempre ha estado presente como uno de los paradigmas de computación importantes.
+        Es el estilo de programación de varios lenguajes que se usan en muchas universidades para enseñar computación.
+        Afortunadamente, en los últimos años varios lenguajes de programación orientados a objetos han introducido algunos
+        ingredientes relevantes de los lenguajes funcionales en su sintaxis y semántica, dando la posibilidad que aquellos
+        que dominan las técnicas de objetos las fortalezcan con técnicas funcionales.<br>
+        Scala sobresale entre esos lenguajes y le da al programador las armas para programar y razonar de una manera diferente
+        acerca de la programación. El soporte de Scala nos ayuda a resolver muchos problemas pensando en términos de
+        transformar entrada en salida, evitando muchos problemas asociados con los efectos laterales y el cambio de estado, típicos
+        de la programación imperativa.<br>
+        Funciones de orden superior, closures, monads, aplicación parcial de funciones, composición de funciones, currying  y un
+        gran número de términos que obligan a preguntarse: ¿es compleja la programación funcional?. Mi respuesta es otra
+        pregunta: ¿Alguna actividad intelectual es simple?
+
+
+
+      </p>
+      <hr/>
+
+      <h1 style="color: orange">
+          <a href="#"
+          name="colecciones" id="colecciones">
+          Colecciones y ventajas de la inmutabilidad</a>
+      </h1>
+      <p>
+        Las colecciones o contenedores de objetos están presentes en todos los programas que escribimos y todos
+        los lenguajes incluyen un marco de trabajo de colecciones. Scala no es la excepción y la mayoría de
+        las colecciones que ofrece son inmutables con muchas facilidades para operaciones de iteración.
+        Estas dos características de las colecciones usadas correctamente nos conducen a escribir
+        código conciso y de gran desempeño en las plataformas multicore actuales.
+      </p>
+      <hr/>
+
+      <h1 style="color: orange">
+          <a href="#"
+          name="matching" id="matching">
+          Pattern Matching</a>
+      </h1>
+      <p>
+        Todos los lenguajes funcionales incluyen pattern matching y Scala mezcla muy bien el pattern matching
+        típico de la programación funcional con los conceptos orientados a objetos (clases case y otras cosas)
+        para brindar un mecanismo muy poderoso para escribir correctamente la lógica de negocio de nuestras aplicaciones.
+
+      </p>
+      <hr/>
+
+      <h1 style="color: orange">
+          <a href="#"
+          name="actores" id="actores">
+          Actores y Programación concurrente</a>
+      </h1>
+      <p>
+        Para muchos, la programación concurrente es la siguiente revolución en la forma que escribimos software. Java y
+        otros lenguajes dan soporte a un modelo de concurrencia basado en técnicas de sincronización por condición y exclusión
+        mutua, adecuadas para muchas aplicaciones pero inadecuadas para otras.
+        Otros modelos de concurrencia han existido desde hace muchos años y uno de ellos es el conocido como el modelo de actores basado
+        en la inexistencia de regiones críticas por estados compartidos entre hilos o procesos, y usando intercambio de mensajes
+        entre los componentes del sistema para resolver problemas de computación concurrente.
+        Scala implementa un modelo de actores para dar soporte a la concurrencia.
+      </p>
+      <hr/>
+
+
+      <h1 style="color: orange">
+          <a href="#"
+          name="parsers" id="parsers">
+          Programación de analizadores sintácticos</a>
+      </h1>
+      <p>
+        En muchos programas tenemos la necesidad de reconocer cadenas de entradas y para ello programamos parsers
+        descritos por los conjuntos de las cadenas de entrada que ellos procesan.<br>
+        Cuando escribimos un parser para un DSL externo, podemos usar herramientas generadoras como Antlr.
+        En lugar de eso, podemos usar la biblioteca de combinadores de parsers de Scala para realizar
+        el análisis sintáctico de muchos DSL externos, definiendo un DSL interno que logra que las definiciones
+        de un parser sean muy similares a las notaciones comunes de gramáticas de tipo BNF.<br>
+                La biblioteca de combinadores de parsers de Scala nos da la posibilidad de utilizar un lenguaje DSL interno para
+        procesar cadenas de entrada, en lugar de tener que utilizar un DSL externo de generadores de analizadores de parsers.
+
+
+      </p>
+      <hr/>
+
+
+
+
+
+
+
+      <h1 style="color: orange"><a href="http://bests2s.com/~bferro"
+                                   name="profesor" id="profesor">Profesor:</a></h1>
+      <p>Dr. B. J. Ferro, <a
+          href="mailto:barbaro.ferro@gmail.com">barbaro.ferro@bests2s.com</a>
+      </p>
+      <p>
+
+      Ingeniero Electrónico por la Escuela de Ingeniería Eléctrica de
+        la Universidad de La Habana, en 1974. <br />
+       Doctor en Ciencias Técnicas por el Instituto de Radio Ingeniería y
+        Electrónica de la Academia de Ciencias de la República Checa en 1984.
+        </p>
+
+      <h1>Trayectoria Profesional</h1>
+
+      <p>Desde el año 1974 hasta 1993 trabajó como Investigador Titular en el
+        Instituto de Cibernética, Matemática y Física de la Academia de Ciencias de
+        Cuba. En esa institución participó en numerosos proyectos del área de
+        Computación y Robótica y fungió durante varios años como miembro de su Consejo
+        Científico. <br />
+        En febrero de 1994 comenzó a trabajar en el Centro Nacional de Cálculo del
+        Instituto Politécnico Nacional, como profesor investigador en la Maestría en
+        Ciencias de la Computación. Este centro pasó a formar parte en 1996, del Centro
+        de Investigación en Computación del IPN, del cual fue fundador, colaborando con
+        la creación de los nuevos programas de maestría y doctorado. En esta
+        institución se desempeñó como jefe del Laboratorio de Tecnología de Software
+        hasta el año 2001. En ese período de trabajo en el Instituto Politécnico Nacional
+        dirigió numerosos proyectos de investigación financiados por el IPN y Conacyt e
+        impartiendo numerosos cursos de posgrado en los programas de Maestría y
+        Doctorado. <br />
+        En agosto de 2001 se incorpora al Tecnológico de Monterrey, Campus Ciudad de
+        México, colaborando con esta institución como profesor investigador en el
+        Departamento de Computación hasta julio de 2009. Con anterioridad a su
+        incorporación de tiempo completo, colaboró como profesor de cátedra durante año
+        y medio. En el Tecnológico de Monterrey fue en varias ocasiones premiado por su
+        labor académica por el resultado de las evaluaciones realizadas por los
+        estudiantes. En el año 2007 fue seleccionado como mejor profesor de la Escuela
+        de Graduados de Ingeniería y Arquitectura y en el año 2008 como mejor profesor
+        de planta del Departamento de Computación. Fue miembro del Senado Académico de
+        la Rectoría de la Zona Metropolitana de la Ciudad de México del Tecnológico de
+        Monterrey durante dos años y medio. Es fundador de la compañía BestS2S Software
+        Solutions en la que actualmente trabaja. <br />
+        Ha publicado numerosos trabajos en revistas y memorias de congresos nacionales
+        e internacionales. Ha sido invitado como conferencista en numerosos eventos. Ha
+        ejecutado varios proyectos de investigación aplicada financiados por el
+        Tecnológico de Monterrey, el IPN y CONACYT. Su papel como formador de recursos
+        humanos de licenciatura y posgrado lo acredita con más de 15 tesistas de
+        licenciatura, 25 tesistas de maestría y seis tesistas de doctorado, todos
+        graduados en la actualidad. El Dr. Ferro tiene una experiencia docente de 30
+        años en el área de la Computación. En los últimos 8 años se ha dedicado
+        mayormente a la docencia de Licenciatura y Posgrado con certificaciones en
+        competencias de los programas de desarrollo de habilidades docentes. Las
+        materias que ha impartido en estos años son: Arquitectura de Software, Técnicas
+        de Producción de Sistemas, Análisis y Diseño Orientado a Objetos, Análisis y
+        Diseño de Sistemas, Fundamentos de la Computación, Programación y Estructuras de Datos,
+        Sistemas Operativos, Programación Concurrente, Programación Orientada a
+        Aspectos, Proyectos de Desarrollo de Software, Diseño y Arquitectura de
+        Software, y otros cursos del área de Sistemas de Información <br />
+        El Dr. Ferro ha participado como miembro del Comité Académico del CENEVAL en el
+        área de Computación, en la especialidad de Programación e Ingeniería de
+        Software. Es miembro de ACM e IEEE y fungió durante varios años como editor
+        asociado de la Revista Computación y Sistemas.<br />
+        Sus áreas de interés entre otras son: lenguajes de programación, tecnología de
+        objetos, sistemas distribuidos basados en componentes, sistemas de agentes de
+        software, y arquitectura de software. <br />
+      </p>
+    </div>
+
+    <div id="copyright">
+      © 2012 <a href="http://www.bests2s.com/~bferro">B. J. Ferro</a></div>
+  </body>
+</html>
